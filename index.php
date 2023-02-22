@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,9 +20,7 @@
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/main-red.css" type="text/css">
 
-  <!-- This styles needs for demo -->
   <link rel="stylesheet" href="preview/lmpixels-demo-panel.css" type="text/css">
-  <!-- /This styles needs for demo -->
 
   <script>
     (function (i, s, o, g, r, a, m) {
@@ -251,6 +250,7 @@
             </div>
           </section>
           <!-- End of About Me Subpage -->
+
           <!-- Resume Subpage -->
           <section class="pt-page pt-page-3" data-id="resume">
             <div class="border-block-top-110"></div>
@@ -414,7 +414,6 @@
             </div>
           </section>
           <!-- End Resume Subpage -->
-
 
           <!-- Portfolio Subpage -->
           <section class="pt-page pt-page-4" data-id="portfolio">
@@ -609,14 +608,11 @@
                   <div class="block-title">
                     <h3>Contact Form</h3>
                   </div>
-                  <form id="contact-form" method="post"
-                    action="https://lmpixels.com/demo/unique/unique-vcard/contact_form/contact_form.php">
-
+                  <form method="post" action="./send_email.php">
                     <div class="messages"></div>
-
                     <div class="controls">
                       <div class="form-group">
-                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name"
+                        <input id="name" type="text" name="name" class="form-control" placeholder="Full Name"
                           required="required" data-error="Name is required.">
                         <div class="form-control-border"></div>
                         <i class="form-control-icon pe-7s-user"></i>
@@ -624,20 +620,20 @@
                       </div>
 
                       <div class="form-group">
-                        <input id="form_email" type="email" name="email" class="form-control"
-                          placeholder="Email Address" required="required" data-error="Valid email is required.">
+                        <input id="email" type="email" name="email" class="form-control" placeholder="Email Address"
+                          required="required" data-error="Valid email is required.">
                         <div class="form-control-border"></div>
                         <i class="form-control-icon pe-7s-mail"></i>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="form-group">
-                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me"
-                          rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                        <textarea id="message" name="message" class="form-control" placeholder="Message for Me" rows="4"
+                          required="required" data-error="Please, leave me a message."></textarea>
                         <div class="form-control-border"></div>
                         <i class="form-control-icon pe-7s-comment"></i>
                         <div class="help-block with-errors"></div>
                       </div>
-                      <input type="submit" class="button btn-send" value="Send message">
+                      <input type="submit" class="button btn-send" value="submit">
                     </div>
                   </form>
                 </div>
@@ -737,4 +733,5 @@
     data-cf-beacon='{"rayId":"7761cdbf9ed44bbc","version":"2022.11.3","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}'
     crossorigin="anonymous"></script>
 </body>
+
 </html>
