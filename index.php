@@ -20,23 +20,20 @@
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/main-red.css" type="text/css">
 
-  <link rel="stylesheet" href="preview/lmpixels-demo-panel.css" type="text/css">
+  <link rel="stylesheet" href="preview/style.css" type="text/css">
 
   <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '../../../../www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-96534204-1', 'auto');
-    ga('send', 'pageview');
+    function startMarquee() {
+      var marquee = document.getElementById('marquee');
+      var speed = 2;
+      var direction = 'left';
+      var spacing = 20;
+      var count = 2;
+      marquee.setAttribute('scrollamount', speed);
+      marquee.setAttribute('direction', direction);
+      marquee.setAttribute('hspace', spacing);
+      marquee.setAttribute('loop', count);
+    }
   </script>
 
   <script src="js/jquery-2.1.3.min.js"></script>
@@ -44,17 +41,14 @@
 </head>
 
 <body>
-  <!-- Loading animation -->
   <div class="preloader">
     <div class="preloader-animation">
       <div class="dot1"></div>
       <div class="dot2"></div>
     </div>
   </div>
-  <!-- /Loading animation -->
 
   <div id="page" class="page">
-    <!-- Header -->
     <header id="site_header" class="header mobile-menu-hide header-color-light">
       <div class="my-photo tilt-effect">
         <img src="images/profileNav.png" alt="image">
@@ -64,13 +58,11 @@
         <h1 class="site-title">Lailatul Fitriyah</h1>
       </div>
 
-      <!-- Navigation -->
       <div class="site-nav">
-        <!-- Main menu -->
         <ul id="nav" class="site-main-menu">
           <li>
             <a class="pt-trigger" href="#home" data-animation="21"><i
-                class="menu-icon pe-7s-icon pe-7s-home"></i>Home</a><!-- href value = data-id without # of .pt-page. -->
+                class="menu-icon pe-7s-icon pe-7s-home"></i>Home</a>
           </li>
           <li>
             <a class="pt-trigger" href="#about_me" data-animation="17"><i
@@ -89,13 +81,9 @@
                 class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
           </li>
         </ul>
-        <!-- /Main menu -->
       </div>
-      <!-- Navigation -->
     </header>
-    <!-- /Header -->
 
-    <!-- Mobile Header -->
     <div class="mobile-header mobile-visible">
       <div class="mobile-logo-container">
         <div class="mobile-site-title">Lailatul Fitriyah</div>
@@ -105,20 +93,21 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <!-- /Mobile Header -->
 
-    <!-- Main Content -->
     <div id="main" class="site-main">
-      <!-- Page changer wrapper -->
       <div class="pt-wrapper" style="background-image: url(images/bg.png);">
-        <!-- Subpages -->
         <div class="subpages">
 
-          <!-- Home Subpage -->
           <section class="pt-page pt-page-1 section-without-bg section-paddings-0 table" data-id="home">
             <div class="section-inner">
               <div class="home-page-block">
                 <h2>Lailatul Fitriyah</h2>
+                <marquee id="marquee" behavior="scroll" direction="left" onmouseover="this.stop()"
+                  onmouseout="this.start()">
+                  <p class="home-page-description">Mobile-Developer</p>
+                  <p class="home-page-description">Frontend-developer</p>
+                  <p class="home-page-description">UI & UX Designer</p>
+                </marquee>
                 <div class="owl-carousel text-rotation">
                   <div class="item">
                     <p class="home-page-description">Mobile-Developer</p>
@@ -133,9 +122,7 @@
               </div>
             </div>
           </section>
-          <!-- End of Home Subpage -->
 
-          <!-- About Me Subpage -->
           <section class="pt-page pt-page-2" data-id="about_me">
             <div class="border-block-top-110"></div>
             <div class="section-inner">
@@ -192,7 +179,6 @@
                 </div>
               </div>
 
-              <!-- Services block -->
               <div class="block-title">
                 <h3>Services</h3>
               </div>
@@ -246,12 +232,9 @@
                   </div>
                 </div>
               </div>
-              <!-- End of Services block -->
             </div>
           </section>
-          <!-- End of About Me Subpage -->
 
-          <!-- Resume Subpage -->
           <section class="pt-page pt-page-3" data-id="resume">
             <div class="border-block-top-110"></div>
             <div class="section-inner">
@@ -270,21 +253,18 @@
                     <h3>Education</h3>
                   </div>
                   <div class="timeline">
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">2020</h5>
                       <h4 class="event-name">University</h4>
                       <span class="event-description">Dian Nuswantoro</span>
                       <p>Major in Informatics Technology.</p>
                     </div>
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">2017</h5>
                       <h4 class="event-name">Vocational High School</h4>
                       <span class="event-description">Texmaco Semarang</span>
                       <p>Major in Computer network Engineering.</p>
                     </div>
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">2014</h5>
                       <h4 class="event-name">Junior High School</h4>
@@ -298,14 +278,12 @@
                     <h3>Experience</h3>
                   </div>
                   <div class="timeline">
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">Oct 2022 - Current</h5>
                       <h4 class="event-name">Mobile-developer</h4>
                       <span class="event-description">PT Graphie Global Interaktif </span>
                       <p>Slicing Ui, API Integration, and Clean Architecture.</p>
                     </div>
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">Aug 2022 - Jan 2023</h5>
                       <h4 class="event-name">FrontEnd Web and Mobile Developer</h4>
@@ -313,21 +291,18 @@
                       <p>Learn intermediate about react js and react native, the final of this i can make some
                         application like news website, e-commerce website, hotel app, movie website.</p>
                     </div>
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">Sep 2020 - Dec 2022</h5>
                       <h4 class="event-name">Gemnastik Competition 2022</h4>
                       <span class="event-description">Software development</span>
                       <p>Build tourist app in semarang.</p>
                     </div>
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">Oct 2020 - Current</h5>
                       <h4 class="event-name">Informatics Engineering Student Associatio</h4>
                       <span class="event-description">Science and Technology Devision</span>
                       <p>SecretaryField ofScience andTechnology.</p>
                     </div>
-                    <!-- Single event -->
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">Oct 2020 - Current</h5>
                       <h4 class="event-name">Dian Nuswantoro ComputerClub</h4>
@@ -404,18 +379,8 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="row">
-                <div class="col-sm-12 col-md-12">
-                  <div class="download-cv-block">
-                    <a class="button" target="_blank" href="#">Download CV</a>
-                  </div>
-                </div>
-              </div> -->
             </div>
           </section>
-          <!-- End Resume Subpage -->
-
-          <!-- Portfolio Subpage -->
           <section class="pt-page pt-page-4" data-id="portfolio">
             <div class="border-block-top-110"></div>
             <div class="section-inner">
@@ -426,10 +391,7 @@
                 </div>
               </div>
 
-              <!-- Portfolio Content -->
               <div class="portfolio-content">
-
-                <!-- Portfolio filter -->
                 <ul id="portfolio_filters" class="portfolio-filters">
                   <li class="active">
                     <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
@@ -441,12 +403,7 @@
                     <a class="filter btn btn-sm btn-link" data-group="illustration">Website</a>
                   </li>
                 </ul>
-                <!-- End of Portfolio filter -->
-
-                <!-- Portfolio Grid -->
                 <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
-
-                  <!-- Portfolio Item 1 -->
                   <figure class="item" data-groups='["all", "media"]'>
                     <a href="#">
                       <img src="images/portfolio/1.png" alt="">
@@ -457,9 +414,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 1 -->
 
-                  <!-- Portfolio Item 2 -->
                   <figure class="item" data-groups='["all", "media"]'>
                     <a title="Praesent Dolor Ex" class="lightbox mfp-iframe">
                       <img src="images/portfolio/2.png" alt="">
@@ -470,9 +425,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 2 -->
 
-                  <!-- Portfolio Item 3 -->
                   <figure class="item" data-groups='["all","media"]'>
                     <a>
                       <img src="images/portfolio/3.png" alt="">
@@ -483,9 +436,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 3 -->
 
-                  <!-- Portfolio Item 4 -->
                   <figure class="item" data-groups='["all", "media"]'>
                     <a>
                       <img src="images/portfolio/4.png" alt="">
@@ -496,9 +447,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 4 -->
 
-                  <!-- Portfolio Item 5 -->
                   <figure class="item" data-groups='["all", "illustration"]'>
                     <a>
                       <img src="images/portfolio/5.png" alt="">
@@ -509,9 +458,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 5 -->
 
-                  <!-- Portfolio Item 6 -->
                   <figure class="item" data-groups='["all", "illustration"]'>
                     <a>
                       <img src="images/portfolio/6.png" alt="">
@@ -522,9 +469,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 6 -->
 
-                  <!-- Portfolio Item 7 -->
                   <figure class="item" data-groups='["all", "illustration"]'>
                     <a>
                       <img src="images/portfolio/7.png" alt="">
@@ -535,9 +480,7 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 7 -->
 
-                  <!-- Portfolio Item 8 -->
                   <figure class="item" data-groups='["all",  "illustration"]'>
                     <a>
                       <img src="images/portfolio/8.png" alt="">
@@ -548,15 +491,11 @@
                       </div>
                     </a>
                   </figure>
-                  <!-- /Portfolio Item 8 -->
                 </div>
-                <!-- /Portfolio Grid -->
 
               </div>
-              <!-- /Portfolio Content -->
             </div>
           </section>
-          <!-- /Portfolio Subpage -->
 
           <!-- Contact Subpage -->
           <section class="pt-page pt-page-5" data-id="contact">
@@ -647,69 +586,6 @@
     </div>
     <!-- /Main Content -->
   </div>
-
-  <!-- Demo Color changer -->
-  <!-- <a id="lm_demo_panel_switcher" class="lm-demo-panel-switcher right"><i class="fa fa-gear"></i></a>
-  <div id="lm_demo_panel" class="lm-demo-panel right panel-color-red active">
-    <div class="demo-panel-title">Template Style</div>
-    <div id="t_style" class="demo-panel-options">
-      <a class="current-t-style t-style-switcher" data-id="template-style-light">
-        <div class="preview w-border t-style t-style-light">Light</div>
-      </a>
-      <a class="t-style-switcher" data-id="template-style-dark">
-        <div class="preview t-style t-style-dark">Dark</div>
-      </a>
-    </div>
-
-    <div class="demo-panel-title">Main Color</div>
-    <div id="main_color" class="demo-panel-options">
-      <a data-id="red" class="current-main-color">
-        <div class="preview color-1">&nbsp;</div>
-      </a>
-      <a data-id="blue">
-        <div class="preview color-2">&nbsp;</div>
-      </a>
-      <a data-id="green">
-        <div class="preview color-3">&nbsp;</div>
-      </a>
-      <a data-id="orange">
-        <div class="preview color-4">&nbsp;</div>
-      </a>
-      <a data-id="yellow">
-        <div class="preview color-5">&nbsp;</div>
-      </a>
-      <a data-id="violet">
-        <div class="preview color-6">&nbsp;</div>
-      </a>
-    </div>
-
-    <div class="demo-panel-title">Nav Color</div>
-    <div id="header_color" class="demo-panel-options">
-      <a class="current-h-color inverse h-color-switcher" data-id="header-color-light">
-        <div class="preview h-color h-color-1 w-border">&nbsp;</div>
-      </a>
-      <a class="h-color-switcher" data-id="header-color-main">
-        <div class="preview h-color h-color-2">&nbsp;</div>
-      </a>
-      <a class="h-color-switcher" data-id="header-color-dark">
-        <div class="preview h-color h-color-3">&nbsp;</div>
-      </a>
-    </div>
-
-    <div class="demo-panel-title mobile-hidden">Nav Position</div>
-    <div id="header_position" class="demo-panel-options mobile-hidden">
-      <a class="current-layout layout-switcher" data-id="layout-menu-left">
-        <div class="preview layout left">Left</div>
-      </a>
-      <a class="layout-switcher" data-id="layout-menu-top">
-        <div class="preview layout top">Top</div>
-      </a>
-      <a class="layout-switcher" data-id="layout-menu-bottom">
-        <div class="preview layout bottom">Bottom</div>
-      </a>
-    </div>
-  </div> -->
-  <!-- /Demo Color changer -->
 
   <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
