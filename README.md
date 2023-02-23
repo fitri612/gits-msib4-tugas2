@@ -1,5 +1,5 @@
 # Portofolio-V3
-Hy its is my portofolio
+Hy its is my portofolio and task in studi independet GITS ID
 
 Nama : Lailatul Fitriyah </br>
 Asal : Universitas Dian Nuswantoro
